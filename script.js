@@ -1,12 +1,13 @@
 const inputBox = document.getElementById("input-box");
-const listContainer = document.getElementById("List-container");
+const listContainer = document.getElementById("list-container");
 
 function addTask() {
-  if (inputBox === "") {
+  if (inputBox.value === "") {
     alert("Please write somehting");
   } else {
     let li = document.createElement("li");
-    li.innerHTML = inputBox.ariaValu;
-    listContainer.appendChild("li");
+
+    li.innerHTML = inputBox.value;
+    listContainer.appendChild(li);
   }
 }

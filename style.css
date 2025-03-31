@@ -7,13 +7,13 @@
 .container {
   min-height: 100vh;
   width: 100%;
-  background-color: rgba(19, 72, 63, 0.267);
+  background-color: #0f2841;
   padding: 10px;
 }
 .todo-app {
   width: 100%;
   max-width: 540px;
-  background: #052674;
+  background: #2d65e7;
   margin: 100px auto;
   padding: 40px 30px 70px;
   border-radius: 10px;
@@ -46,6 +46,33 @@ button {
   padding: 10px 15px;
   cursor: pointer;
   color: aliceblue;
-  background-color: #8d9bbc;
+  background-color: #080b12;
   border-radius: 8px;
+}
+ul li {
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+ul li::before {
+  content: "";
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  top: 12px;
+  left: 8px;
+  background-image: url(images/Picture-white.png);
+}
+ul li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+ul li.checked::before {
+  background-image: url(images/picture-black.png);
 }
